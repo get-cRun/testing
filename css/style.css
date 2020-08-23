@@ -48,7 +48,7 @@ ul{
 }
 .contact-btn {
     margin-right: 7%;
-    width: 7em;
+    width: 6em;
     text-align: center;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -56,13 +56,13 @@ ul{
     display: block;
     border-style: solid;
     border-width: 2px;
-    border-radius: 10px;
+    border-radius: 50px;
     transition: 500ms;
 }
 .contact-btn:hover {
     background: white;
     color: black;
-    
+    border-radius: 5px;  
 }
 
 .profile_main {
