@@ -25,6 +25,7 @@ ul{
     border-bottom-left-radius: 5px;
     padding: 1% 2% 1% 2%;
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 1;
     
@@ -75,13 +76,33 @@ ul{
     padding-bottom: 12em;
 }
 .avatar-quote {
-    animation: fade 1s ;
-
+    position: relative;
+    overflow: hidden;
+    animation: fade 5s ease-in-out;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .avatar-quote img {
     width: 60%;
     height: 60%;
+    position: relative;
+    left: -600px;
+    animation: slide-in 2s ease-out 2s forwards;
+}
+@keyframes slide-in {
+    from {
+        left: -600px;
+    }
+    to {
+        left: 0;
+    }
 }
 
 
@@ -125,10 +146,24 @@ ul{
 }
 .social a img {
     width: 50px;
-    transition: 500ms;
+    transition: 300ms;
+    border-radius: 50%;
 }
 .social a img:hover {
-    width: 4em;
+    width: 75px;
+    border-radius: 4px;
+}
+.fb-logo:hover {
+    background-color: #3b5998;
+}
+.tw-logo:hover {
+    background-color: #00acee;
+}
+.in-logo:hover {
+    background-color: #0e76a8;
+}
+.yt-logo:hover {
+    background-color: #c4302b;
 }
 .show-desktop {
     display: none;
@@ -150,9 +185,11 @@ ul{
     
     .avatar-quote img {
         width: 45%;
+        height: 45%;
+        padding-top: 1.2em;
     }
     .avatar-quote p {
-        padding-top: 3.2em;
+        padding-top: 1.2em;
     }
     
     .profile_pic {
@@ -194,5 +231,9 @@ ul{
     }
     .avatar-quote img {
         width: 27%;
+        padding-top: 2.2em;
+    }
+    .avatar-quote p {
+        padding-top: 3.2em;
     }
 }
